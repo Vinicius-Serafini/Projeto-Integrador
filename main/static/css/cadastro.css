@@ -1,0 +1,21 @@
+#cidade-uf-input-container{
+    display: flex;
+}
+
+#cidade-div{
+    width: 50%;
+}
+
+#uf-div{
+    padding-left: 30px;
+    width: 50%;
+}
+
+select {
+    width: 100%;
+    height: 45px;
+    background: #E6E6F2; 
+    border-radius: 5px;
+    border: 0px solid;
+    padding: 5px 0 0 10px;
+}

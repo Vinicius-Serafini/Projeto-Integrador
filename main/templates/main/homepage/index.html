@@ -1,0 +1,63 @@
+{% extends "main/base_main/index.html" %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/card.css' %}">
+{% endblock styles %}
+{% block painel_principal %}
+    {% for card in cards %}
+        <div class="card-container">
+            <div class="instituicao-container">
+                <div class="title-wrapper">
+                    <h3>
+                        Instituição:
+                    </h3>
+                </div>
+                <div class="instituicao-wrapper">
+                    <h2>
+                        Empresa Brelelele
+                    </h2>
+                </div>
+
+                <div class="cardTitle-container">
+                    <h1>Campanha do agasalho</h1>
+                </div>
+
+            </div>
+
+            <div class="descricao-container">
+                <div class="title-wrapper">
+                    <h3>
+                        Descrição:
+                    </h3>
+                </div>
+                <div class="descricao-wrapper">
+                    <p>
+                        Campanha do agasalho para o inverno de 2020, bla bla bla...
+                    </p>
+                </div>
+            </div>
+
+            <div class="requisitos-container">
+                <div class="title-wrapper">
+                    <h3>
+                        Aceita doações em:
+                    </h3>
+                </div>
+                <div class="imgs-wrapper">
+                    <img id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas">
+                    <img id="comida" src="{% static 'icons/comida.png' %}" alt="comida">
+                    <img id="dinheiro" src="{% static 'icons/dinheiro.png' %}" alt="dinheiro">
+                </div>
+
+                <div class="maisInformacoes-container">
+                    <a href="" class="button-wrapper">
+                        <button>
+                            Mais informações
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    {% endfor %}
+{% endblock painel_principal %}

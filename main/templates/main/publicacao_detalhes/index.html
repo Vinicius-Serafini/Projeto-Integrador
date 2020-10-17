@@ -1,0 +1,92 @@
+{% extends "main/base_main/index.html" %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/publicacao_detalhes.css' %}">
+{% endblock styles %}
+{% block painel_principal %}
+    <div class="card">
+        <div class="favIcon-container">
+            <img class="favIcon" src="../Projeto integrador icones/salvar.png" alt="">
+        </div>
+        <div class="card-container">
+            <div class="instituicao-container">
+                <div class="title-wrapper">
+                    <h3>
+                        Instituição:
+                    </h3>
+                </div>
+                <div class="instituicao-wrapper">
+                    <h2>
+                        Empresa Brelelele
+                    </h2>
+                </div>
+
+                <div class="cardTitle-container">
+                    <h1>Campanha do agasalho</h1>
+                </div>
+
+            </div>
+
+            <div class="descricao-container">
+                <div class="title-wrapper">
+                    <h3>
+                        Descrição:
+                    </h3>
+                </div>
+                <div class="descricao-wrapper">
+                    <p>
+                        Campanha do agasalho para o inverno de 2020, bla bla bla...
+                    </p>
+                </div>
+            </div>
+
+            <div class="requisitos-container">
+                <div class="title-wrapper">
+                    <h3>
+                        Aceita doações em:
+                    </h3>
+                </div>
+                <div class="imgs-wrapper">
+                    <div class="icon-container">
+                        <img class="icon" id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas">
+                        <p class="title-icon">Roupas</p>
+                    </div>
+                    <div class="icon-container">
+                        <img class="icon" id="comida" src="{% static 'icons/comida.png' %}" alt="comida">
+                        <p class="title-icon">Alimentos não perecíveis</p>
+                    </div>
+                    <div class="icon-container">
+                        <img class="icon" id="dinheiro" src="{% static 'icons/dinheiro.png '%}" alt="dinheiro">
+                        <p class="title-icon">Dinheiro</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contato-container">
+        <div class="title-container">
+            <h2 class="title">
+                Informações para contato:
+            </h2>
+        </div>
+
+        <div class="email-container">
+            <h3 class="title-contato">Email:</h3>
+            <p class="contato" id="email">
+                emailDeContato@exemplo.com
+            </p>
+        </div>
+
+        <div class="telefone-container">
+            <h3 class="title-contato">Telefone:</h3>
+            <p class="contato" id="telefone">
+                (XX) X XXXX-XXXX
+            </p>
+        </div>
+    </div>
+
+</div>
+{% endblock painel_principal %}

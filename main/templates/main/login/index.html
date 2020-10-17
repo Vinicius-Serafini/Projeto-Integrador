@@ -1,0 +1,42 @@
+{% extends "main/base_login/index.html" %}
+{% block body %} 
+    <div class="container" id="login-container">
+        <div class="logo-container">
+            <div class="wrapper" id="logo-wrapper">
+                <h1 class="title" id="logo-title">Ajuda <span id="logo-span">Ai!</span></h1>
+            </div>
+            <div class="wrapper" id="subtitle-wrapper">
+                <h2 class="subtitle" id="logo-subtitle">Acessar o Ajuda Ai!</h2>
+            </div>
+        </div>
+
+        <form class="form-container">
+            <div class="input-container" id="email-input-container">
+                <label>E-mail</label>
+                <div class="input-wrapper">
+                    <input type="email" name="E-mail" placeholder="Digite seu e-mail">
+                </div>
+            </div>
+
+            <div class="input-container" id="password-input-container">
+                <label>Senha</label>
+                <div class="input-wrapper">
+                    <input type="password" name="Senha" placeholder="Digite sua Senha"> 
+                </div>
+                <a href=""><h3>Esqueceu a senha?</h3></a>
+            </div>
+
+            <div class="button-container">
+
+                <div class="button-wrapper">
+                    <button type = "submit" id="btt-acessar"> ACESSAR </button>
+                </div>
+            </div>
+
+            <div class="container" id="footer-container">
+                <a href="">Ainda não possui uma conta? <strong>Cadastrar</strong></a>
+            </div>
+        </form>
+
+    </div>
+{% endblock body %}

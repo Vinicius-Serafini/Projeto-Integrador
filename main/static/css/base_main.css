@@ -1,0 +1,101 @@
+body {
+    background: #E5E5E5;
+    font-family: sans-serif;
+    grid-template-rows: 150px auto;
+    grid-template-areas: "header" "painel-principal";
+}
+
+#logo-title{
+    font-size: 50px;
+    color: #a713a7;
+    margin-top: 20px;
+    padding-right: 50%;
+}
+
+#logo-span{
+    color: #16a709;
+}
+
+header {
+    grid-area: header;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: #20c0ab;
+
+    display: flex;
+}
+
+#logo-wrapper{
+    flex: 2;
+    text-align: center;
+}
+
+#novaDoacao-wrapper{
+    flex: 1;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#novaDoacao-buttton button{
+    background: #2ed12b;
+    border: none;
+    width: 180px;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+}
+
+#novaDoacao-buttton button:hover{
+    background-color: #79ee4b;
+}
+
+#novaDoacao-buttton button:focus{
+    background-color: #1b8019;
+    outline:none;
+}
+
+#meuPerfil-wrapper{
+    flex: 1;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#meuPerfil-button{
+    background: #117c6e;
+    border: none;
+    width: 130px;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+}
+
+#meuPerfil-button:hover{
+    background-color: #179e8c;
+}
+
+#meuPerfil-button:focus{
+    background-color: #0d6459;
+    outline:none;
+}
+
+.painel-principal {
+    padding: 150px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.favIcon-container{
+    text-align: right;
+    padding: 0px 40px 0 0;
+}
+.favIcon{
+    height:36px;
+    width: auto;
+    margin-top: -10px;
+    position: absolute;
+}
