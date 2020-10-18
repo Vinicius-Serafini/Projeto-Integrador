@@ -7,13 +7,6 @@
 (levantamento de requisitos, arquitetura, prototipagem, desenvolvimento, testes, etc.). Nosso grupo decidiu desenvolver o Ajuda Ai!, uma plataforma web para que organizadores 
 de eventos beneficentes possam anunciar seus eventos ou arrecadações</p>
 <p>Todo final de bimestre o grupo apresenta a banca avaliadora o que foi feito durante o bimestre, documentos, atividades, códigos, alterações, etc.).</br>
-Você pode acompanhar tudo o que foi desenvolvido pelo grupo em cada bimestre por aqui:
-<ul> 
-  <li><a href="1bi">1° Bimestre</a></li>
-  <li><a href="2bi">2° Bimestre</a></li>
-  <li><a href="3bi">3° Bimestre</a></li>
-  <li><a href="4bi">4° Bimestre</a></li>
-</ul>
 
 <H2>Lições aprendidas</H2>
 <ul> 
