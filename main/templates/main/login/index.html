@@ -10,7 +10,8 @@
             </div>
         </div>
 
-        <form class="form-container">
+        <form class="form-container" method="POST">
+            {% csrf_token %}
             <div class="input-container" id="email-input-container">
                 <label>E-mail</label>
                 <div class="input-wrapper">
@@ -34,7 +35,7 @@
             </div>
 
             <div class="container" id="footer-container">
-                <a href="">Ainda não possui uma conta? <strong>Cadastrar</strong></a>
+                <a href="/cadastrar">Ainda não possui uma conta? <strong>Cadastrar</strong></a>
             </div>
         </form>
 
