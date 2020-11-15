@@ -21,5 +21,5 @@ de eventos beneficentes possam anunciar seus eventos ou arrecadações</p>
   <li><a href="/1 bi">1 Bimestre</a></li>
   <li><a href="/2 bi">2 Bimestre</a></li>
   <li><a href="/3 bi">3 Bimestre</a></li>
-  <li><a href="/4 bi">4 Bimestre</a></li>
+  <li><a href="/4 bi - Projeto final">4 Bimestre</a></li>
 </ol>
