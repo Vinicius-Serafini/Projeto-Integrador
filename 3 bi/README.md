@@ -12,4 +12,4 @@ elaborado utilizando o Figma e então o html e css final</p>
 <img src="/3 bi/prints telas/Nova publicacao.png">
 <img src="/3 bi/prints telas/Detalhes da publicacao final.png">
 
-<a href="/4 bi">4 Bimestre</a>
+<a href="/4 bi - Projeto final">4 Bimestre</a>
