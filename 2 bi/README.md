@@ -13,5 +13,5 @@ seria o nosso foco.</p>
 <img src="/2 bi/Tela de publicação.png">
 <H3>Cadastro de Publicação</H3>
 <img src="/2 bi/Telas de cadastro de publicação.png">
-<H3>Cadastro de Usuário/H3>
+<H3>Cadastro de Usuário</H3>
 <img src="/2 bi/Telas de cadastro de usuario.png">
