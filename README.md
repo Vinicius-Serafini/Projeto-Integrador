@@ -1,5 +1,3 @@
-<H1><Strong>⚠️⚠️ EM CONSTRUÇÃO ⚠️⚠️</strong></H1>
-
 <H1>Ajuda Ai! — Projeto desenvolvido na matéria Projeto Integrador do curso de Análise e Desenvolvimento de Sistemas da Unipar-Toledo</H1>
 <H3>Vinicius Serafini | Daniel Alberto | Eduardo Flores | Renan Meinerz</H3>
 
@@ -14,10 +12,13 @@ de eventos beneficentes possam anunciar seus eventos ou arrecadações</p>
   <li>Apenas teoria não é o suficiente, é preciso muita prática para realmente entender algo</li>
   <li>Nem tudo sai como a gente quer</li>
   <li>Uma ferramenta boa e moderna é importante, mas a ferramenta não se usa sozinha! O mais importante é saber o que fazer e como a ferramenta pode ajudar no processo</li>
-  <li>Projetos grandes são construidos aos poucos e com o tempo, um passo de cada vez</li>
+  <li>É necessario saber o que for fazer antes de criar código</li>
 </ul>
 
-
-<H1>🛑🛑 Fim da linha...🛑🛑</H1>
-<H3>essa descrição (assim como o projeto) ainda está sendo construida, portanto não há nada de novo, mas fique tranquilo que até dia <em>23/11</em> entregamos
-algo (assim esperamos)</H3>
+<H2>O que foi feito em cada bimestre</H2>
+<ol>
+  <li><a href="/1 bi">1 Bimestre</a></li>
+  <li><a href="/2 bi">2 Bimestre</a></li>
+  <li><a href="/3 bi">3 Bimestre</a></li>
+  <li><a href="/4 bi">4 Bimestre</a></li>
+</ol>
