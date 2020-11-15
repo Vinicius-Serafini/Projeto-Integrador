@@ -4,6 +4,9 @@
     <link rel="stylesheet" href="{% static 'css/nova_publicacao.css' %}">
 {% endblock styles %}
 {% block painel_principal %}
+
+<form method="post">
+    {% csrf_token %}
     <div class="detalhes-container">
 
         <div class="titulo-container">
@@ -11,14 +14,14 @@
                 Informe o titulo:
             </h2>
 
-            <input type="text">
+            <input name="titulo" type="text" required>
         </div>
 
         <div class="descricao-container">
-            <h2 class="desricao">
+            <h2 class="descricao">
                 Informe mais detalhes sobre a doação:
             </h2>
-            <textarea name="desricao" id="" cols="30" rows="15"></textarea>
+            <textarea name="descricao" id="" cols="30" rows="15" maxlength=600 required></textarea>
         </div>
 
     </div>
@@ -30,24 +33,25 @@
             
             <div class="buttons-doacao">
                 <div class="doacao-button-container">
-                    <button class="doacao-button">
+                    <input name="roupas" value="roupa" type="checkbox" class="doacao-button">
                         <img class="icon" src="{% static 'icons/roupas.png' %}" alt="">
-                        <p>Roupas</p>
-                    </button>
+                        <p>Roupas</p>   
+                    </input>
                 </div>
 
                 <div class="doacao-button-container">
-                    <button class="doacao-button">
-                        <img class="icon" src="(% static 'icons/comida.png' %)" alt="">
+                    <input name="alimentos" value="alimento" type="checkbox" class="doacao-button">
+                        <img class="icon" src="{% static 'icons/comida.png' %}" alt="">
                         <p>Alimentos</p>
-                    </button>
+                    </input>
+
                 </div>
 
                 <div class="doacao-button-container">
-                    <button class="doacao-button">
+                    <input name="dinheiro" value="dinheiro" type="checkbox" class="doacao-button">
                         <img class="icon" src="{% static 'icons/dinheiro.png' %}" alt="">
                         <p>Dinheiro</p>
-                    </button>
+                </checkbox>
                 </div>
             </div>
 
@@ -56,18 +60,20 @@
         <div class="contato-informacoes">
             <div class="email-container">
                 <h2>Email:</h2>
-                <input type="text">
+                <input name="email" type="text">
             </div>
 
             <div class="whatsapp-container">
                 <h2>Whats App:</h2>
-                <input type="text">
+                <input name="whatsapp" type="tel" placeholder="xx x xxxx xxxx" pattern="[0-9]{2} [0-9]{1} [0-9]{4} [0-9]{4}">
             </div>
         </div>
 
         <div class="button-container">
-            <button>Publicar</button>
+            <button type = "submit">Publicar</button>
         </div>
 
     </div>
+</form>
+    
 {% endblock painel_principal %}

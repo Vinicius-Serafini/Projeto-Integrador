@@ -21,7 +21,8 @@ app_name ="main"
 urlpatterns = [
     path("", views.homepage, name="homepage"),
     path("login/", views.login, name="login"),
+    path("logout/", views.logout, name="logout"),
     path("cadastrar/", views.cadastrar, name="cadastrar"),
-    path("nova_publicacao/", views.nova_publicacao, name="nova publicacao"),
-    path("publicacao_detalhes/", views.publicacao_detalhes, name="publicacao detalhes"),
+    path("nova_publicacao/", views.nova_publicacao, name="nova_publicacao"),
+    path("publicacao_detalhes/<int:id>", views.publicacao_detalhes, name="publicacao_detalhes"),
 ]

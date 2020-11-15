@@ -17,12 +17,12 @@
                 </div>
                 <div class="instituicao-wrapper">
                     <h2>
-                        Empresa Brelelele
+                        {{publicacao.usuario.nome}}
                     </h2>
                 </div>
 
                 <div class="cardTitle-container">
-                    <h1>Campanha do agasalho</h1>
+                    <h1>{{publicacao.titulo}}</h1>
                 </div>
 
             </div>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="descricao-wrapper">
                     <p>
-                        Campanha do agasalho para o inverno de 2020, bla bla bla...
+                        {{publicacao.descricao}}
                     </p>
                 </div>
             </div>
@@ -48,15 +48,27 @@
                 </div>
                 <div class="imgs-wrapper">
                     <div class="icon-container">
+                        {% if publicacao.roupa is True %}
                         <img class="icon" id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas">
+                        {% else %}
+                        <img class="icon" id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas" style="opacity:0.1">
+                        {% endif %}
                         <p class="title-icon">Roupas</p>
                     </div>
                     <div class="icon-container">
+                        {% if publicacao.alimento is True %}
                         <img class="icon" id="comida" src="{% static 'icons/comida.png' %}" alt="comida">
+                        {% else %}
+                        <img class="icon" id="comida" src="{% static 'icons/comida.png' %}" alt="comida" style="opacity:0.1">
+                        {% endif %}
                         <p class="title-icon">Alimentos não perecíveis</p>
                     </div>
                     <div class="icon-container">
+                        {% if publicacao.dinheiro is True %}
                         <img class="icon" id="dinheiro" src="{% static 'icons/dinheiro.png '%}" alt="dinheiro">
+                        {% else %}
+                        <img class="icon" id="dinheiro" src="{% static 'icons/dinheiro.png '%}" alt="dinheiro">
+                        {% endif %}
                         <p class="title-icon">Dinheiro</p>
                     </div>
                 </div>
@@ -76,14 +88,14 @@
         <div class="email-container">
             <h3 class="title-contato">Email:</h3>
             <p class="contato" id="email">
-                emailDeContato@exemplo.com
+                {{ publicacao.email }}
             </p>
         </div>
 
         <div class="telefone-container">
             <h3 class="title-contato">Telefone:</h3>
             <p class="contato" id="telefone">
-                (XX) X XXXX-XXXX
+                {{ publicacao.whatsapp }}
             </p>
         </div>
     </div>

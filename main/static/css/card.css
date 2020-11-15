@@ -21,6 +21,8 @@
 
 .title-wrapper h3 {
     font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .instituicao-wrapper {
@@ -37,8 +39,10 @@
     padding-right: 15px;
 }
 
-.descricao-wrapper {
+.descricao-wrapper p{
     font-size: 20px;
+    max-width: 275px;
+    overflow: hidden;
 }
 
 .requisitos-container{
@@ -49,6 +53,8 @@
 
 .imgs-wrapper{
     display: flex;
+    height: 50px;
+    background-color: white;
 }
 
 .imgs-wrapper img{

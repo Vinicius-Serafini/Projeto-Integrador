@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{% static 'css/card.css' %}">
 {% endblock styles %}
 {% block painel_principal %}
-    {% for card in cards %}
+    {% for publicacao in publicacoes %}
         <div class="card-container">
             <div class="instituicao-container">
                 <div class="title-wrapper">
@@ -13,13 +13,11 @@
                     </h3>
                 </div>
                 <div class="instituicao-wrapper">
-                    <h2>
-                        Empresa Brelelele
-                    </h2>
+                    <h2>{{ publicacao.usuario.nome }}</h2>
                 </div>
 
                 <div class="cardTitle-container">
-                    <h1>Campanha do agasalho</h1>
+                    <h1>{{ publicacao.titulo }}</h1>
                 </div>
 
             </div>
@@ -32,7 +30,7 @@
                 </div>
                 <div class="descricao-wrapper">
                     <p>
-                        Campanha do agasalho para o inverno de 2020, bla bla bla...
+                        {{ publicacao.descricao}}
                     </p>
                 </div>
             </div>
@@ -44,19 +42,32 @@
                     </h3>
                 </div>
                 <div class="imgs-wrapper">
-                    <img id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas">
-                    <img id="comida" src="{% static 'icons/comida.png' %}" alt="comida">
-                    <img id="dinheiro" src="{% static 'icons/dinheiro.png' %}" alt="dinheiro">
+                    {% if publicacao.roupa is True %}
+                        <img id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas">
+                    {% else %}
+                        <img id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas" style="opacity:0.1">
+                    {% endif %}
+
+                    {% if publicacao.alimento is True %}
+                        <img id="comida" src="{% static 'icons/comida.png' %}" alt="comida">
+                    {% else %}
+                        <img id="comida" src="{% static 'icons/comida.png' %}" alt="comida" style="opacity:0.1">
+                    {% endif %}
+                    
+                    {% if publicacao.dinheiro is True %}
+                        <img id="dinheiro" src="{% static 'icons/dinheiro.png' %}" alt="dinheiro">
+                    {% else %}
+                        <img id="dinheiro" src="{% static 'icons/dinheiro.png' %}" alt="dinheiro" style="opacity:0.1">
+                    {% endif %}
                 </div>
 
                 <div class="maisInformacoes-container">
-                    <a href="" class="button-wrapper">
+                    <a href="{% url 'main:publicacao_detalhes' publicacao.id %}" class="button-wrapper">
                         <button>
                             Mais informações
                         </button>
                     </a>
                 </div>
-
             </div>
         </div>
     {% endfor %}

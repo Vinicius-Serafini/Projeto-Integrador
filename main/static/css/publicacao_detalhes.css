@@ -62,6 +62,13 @@
 
 .descricao-wrapper {
     font-size: 25px;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.descricao-wrapper p{
+    max-width: 575px;
+    overflow: hidden;
 }
 
 .requisitos-container{

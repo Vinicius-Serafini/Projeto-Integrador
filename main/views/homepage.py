@@ -1,16 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-card = [
-    {"id" : 1},
-    {"id" : 2},
-    {"id" : 3},
-    {"id" : 4},
-]
-
+from main.models import Publicacao
 
 def homepage(request):
+    
+    if 'login_id' not in request.session:
+        return redirect('/login')
+
+
     context = {
-        'cards' : card
+        'publicacoes' : Publicacao.objects.all()
         }
+    
     return render(request, 'main/homepage/index.html', context)
