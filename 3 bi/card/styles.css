@@ -1,0 +1,78 @@
+.card-container{
+    display: grid;
+    width: 300px;
+    text-align: center;
+    grid-template-rows:  150px 225px 175px;
+    grid-template-areas: "header" "content" "footer";
+}
+
+.instituicao-container{
+    grid-area: header;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.title-wrapper {
+    text-align: left;
+}
+
+.title-wrapper h3 {
+    font-size: 13px;
+}
+
+.instituicao-wrapper {
+    font-size: 13px;
+}
+
+.cardTitle-container {
+    font-size: 14px;
+}
+
+.descricao-container{
+    grid-area: content;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.descricao-wrapper {
+    font-size: 20px;
+}
+
+.requisitos-container{
+    grid-area: footer;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.imgs-wrapper{
+    display: flex;
+}
+
+.imgs-wrapper img{
+    height: 50px;
+    width: auto;
+    margin: auto;
+}
+
+.maisInformacoes-container{
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.button-wrapper button{
+    background: #A33391;
+    border: none;
+    width: 130px;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+}
+
+.button-wrapper button:hover{
+    background-color: #be3ea9;
+}
+
+.button-wrapper button:focus{
+    background-color: #812a73;
+    outline:none;
+}
