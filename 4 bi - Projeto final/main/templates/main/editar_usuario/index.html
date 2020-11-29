@@ -1,39 +1,31 @@
-{% extends "main/base_login/index.html" %}
+{% extends "main/base_main/index.html" %}
 {% load static %}
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/editar_usuario.css' %}">
 {% endblock %}
-{% block body %}
-    <div class="container" id="login-container">
-        <div class="logo-container">
-            <div class="wrapper" id="logo-wrapper">
-                <h1 class="title" id="logo-title">Ajuda <span id="logo-span">Ai!</span></h1>
-            </div>
-            <div class="wrapper" id="subtitle-wrapper">
-                <h2 class="subtitle" id="logo-subtitle">Acessar o Ajuda Ai!</h2>
-            </div>
-        </div>
-
+{% block painel_principal %}
+    <div class="form-wrapper">
+        <H2 class="title">Olá {{ usuario.nome }}</H2>
         <form class="form-container" method="POST">
             {% csrf_token %}
             <div class="input-container" id="email-input-container">
                 <label>E-mail</label>
                 <div class="input-wrapper">
-                    <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                    <input type="email" value="{{ usuario.email }}" name="email" placeholder="Digite seu e-mail" required>
                 </div>
             </div>
 
             <div class="input-container" id="password-input-container">
                 <label>Senha</label>
                 <div class="input-wrapper">
-                    <input type="password" name="senha" placeholder="Digite sua Senha" required> 
+                    <input type="password" value="{{ usuario.senha }}" name="senha" placeholder="Digite sua Senha" required> 
                 </div>
             </div>
 
             <div class="input-container" id="nome-input-container">
                 <label>Nome</label>
                 <div class="input-wrapper">
-                    <input type="text" name="nome" placeholder="Digite seu nome" required>
+                    <input type="text" value="{{ usuario.nome }}" name="nome" placeholder="Digite seu nome" required>
                 </div>
             </div>
 
@@ -41,14 +33,14 @@
                 <div id="cidade-div">
                     <label>Cidade</label>
                     <div class="input-wrapper">
-                        <input type="text" name="cidade" placeholder="Digite sua cidade" required>
+                        <input type="text" value="{{ usuario.cidade }}" name="cidade" placeholder="Digite sua cidade" required>
                     </div>
                 </div>
                 <div id="uf-div">
                     <label>UF</label>
                     <div class="input-wrapper">
                         <select name="uf" id="uf" required>
-                            <option value="" disabled selected hidden>Escolha sua UF</option>
+                            <option value="{{ usuario.uf }}" disabled selected hidden>{{ usuario.uf }}</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
                             <option value="AP">Amapá</option>
@@ -84,14 +76,14 @@
             <div class="button-container">
 
                 <div class="button-wrapper">
-                    <button type = "submit">CADASTRAR</button>
+                    <button type = "submit">SALVAR</button>
                 </div>
             </div>
 
-            <div class="container" id="footer-container">
-                <a href="{% url 'main:login' %}">Já possui uma conta? <strong>Acessar</strong></a>
+            <div class="excluir-container">
+                <a href="">Excluir minha conta</a>
             </div>
-        </form>
 
+        </form>
     </div>
 {% endblock %}

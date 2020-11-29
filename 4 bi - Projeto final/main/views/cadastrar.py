@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 from main.models import Usuario
@@ -13,7 +13,9 @@ def cadastrar(request):
                     uf = request.POST['uf'],
                     )
 
-        usuario.save()     
+        usuario.save()  
+
+        return redirect('/login')
     
     
     return render(request, 'main/cadastro/index.html')

@@ -5,7 +5,7 @@ from main.models import Usuario
 
 class Publicacao(models.Model):
 
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, null=True)
+    usuario = models.ForeignKey(Usuario, on_delete=models.PROTECT, null=True)
 
     titulo = models.CharField(max_length=50, null=True)
     descricao = models.CharField(max_length=600, null=True)

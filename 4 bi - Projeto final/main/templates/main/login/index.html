@@ -24,7 +24,6 @@
                 <div class="input-wrapper">
                     <input type="password" name="senha" placeholder="Digite sua Senha"> 
                 </div>
-                <a href=""><h3>Esqueceu a senha?</h3></a>
             </div>
 
             <div class="button-container">
@@ -35,7 +34,7 @@
             </div>
 
             <div class="container" id="footer-container">
-                <a href="/cadastrar">Ainda não possui uma conta? <strong>Cadastrar</strong></a>
+                <a href="{% url 'main:cadastrar' %}">Ainda não possui uma conta? <strong>Cadastrar</strong></a>
             </div>
         </form>
 

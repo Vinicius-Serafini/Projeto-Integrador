@@ -25,4 +25,12 @@ urlpatterns = [
     path("cadastrar/", views.cadastrar, name="cadastrar"),
     path("nova_publicacao/", views.nova_publicacao, name="nova_publicacao"),
     path("publicacao_detalhes/<int:id>", views.publicacao_detalhes, name="publicacao_detalhes"),
+    path("editar_publicacao/<int:id>", views.editar_publicacao, name="editar_publicacao"),
+    path("remover_publicacao/<int:id>", views.remover_publicacao, name="remover_publicacao"),
+    path("editar_usuario/<int:id>", views.editar_usuario, name="editar_usuario"),
+    path("minhas_publicacoes/", views.minhas_publicacoes, name="minhas_publicacoes"),
+    path("publicacoes_salvas/", views.publicacoes_salvas, name="publicacoes_salvas"),
+    path("salvar_publicacao_favoritos/<int:id>", views.salvar_publicacao_favoritos, name="salvar_publicacao_favoritos"),
+    path("remover_publicacao_favoritos/<int:id>", views.remover_publicacao_favoritos, name="remover_publicacao_favoritos"),
+
 ]

@@ -11,4 +11,9 @@ def publicacao_detalhes(request, id):
     publicacao = get_object_or_404(Publicacao, pk=id)
     print(publicacao)
 
-    return render(request, 'main/publicacao_detalhes/index.html', {'publicacao': publicacao})
+    context = {
+        'publicacao' : publicacao,
+        'usu_id' : request.session['login_id']
+    }
+
+    return render(request, 'main/publicacao_detalhes/index.html', context)

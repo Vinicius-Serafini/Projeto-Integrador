@@ -13,16 +13,16 @@
     <header>
 
         <div class="wrapper" id="logo-wrapper">
-            
-            <h1 class="title" id="logo-title">
-                Ajuda <span id="logo-span">Ai!</span>
-            </h1>
-            
+            <a href="{% url 'main:homepage' %}" style="text-decoration: none;" >
+                <h1 class="title" id="logo-title">
+                    Ajuda <span id="logo-span">Ai!</span>
+                </h1>
+            </a>
             
         </div>
 
         <div class="wrapper" id="novaDoacao-wrapper">
-            <a href="/nova_publicacao" class="button" id="novaDoacao-buttton">
+            <a href="{% url 'main:nova_publicacao' %}" class="button" id="novaDoacao-buttton">
                 <button>
                     Cadastrar nova Doação
                 </button>     
@@ -30,19 +30,26 @@
         </div>
 
         <div class="wrapper" id="meuPerfil-wrapper">
-        <a href="/logout">
-            <button id="meuPerfil-button">
-                Sair
-            </button>
-        </a>
-
+            <div class="dropdown">
+                <button class="dropbtn">Opções</button>
+                <div class="dropdown-content">
+                  <a href="{% url 'main:editar_usuario' usu_id %}">Editar perfil</a>
+                  <a href="{% url 'main:publicacoes_salvas' %}">Publicacoes salvas</a>
+                  <a href="{% url 'main:minhas_publicacoes' %}">Minhas publicacoes</a>
+                  <hr>
+                  <a class ='sair' href="{% url 'main:logout' %}">Sair</a>
+                </div>
+              </div>
         </div>
     </header>
-
+    {% block body %}
+    {% endblock %}
+        
     <div class="painel-principal">
         {% block painel_principal %}
         {% endblock %}
-        
     </div>
 </body>
+    {% block scripts %}
+    {% endblock %}
 </html>

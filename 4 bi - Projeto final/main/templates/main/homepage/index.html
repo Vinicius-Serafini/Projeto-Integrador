@@ -1,74 +1,112 @@
 {% extends "main/base_main/index.html" %}
 {% load static %}
 {% block styles %}
-    <link rel="stylesheet" href="{% static 'css/card.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
 {% endblock styles %}
+
+
 {% block painel_principal %}
     {% for publicacao in publicacoes %}
-        <div class="card-container">
-            <div class="instituicao-container">
-                <div class="title-wrapper">
-                    <h3>
-                        Instituição:
-                    </h3>
-                </div>
-                <div class="instituicao-wrapper">
-                    <h2>{{ publicacao.usuario.nome }}</h2>
-                </div>
-
-                <div class="cardTitle-container">
-                    <h1>{{ publicacao.titulo }}</h1>
-                </div>
-
-            </div>
-
-            <div class="descricao-container">
-                <div class="title-wrapper">
-                    <h3>
-                        Descrição:
-                    </h3>
-                </div>
-                <div class="descricao-wrapper">
-                    <p>
-                        {{ publicacao.descricao}}
-                    </p>
-                </div>
-            </div>
-
-            <div class="requisitos-container">
-                <div class="title-wrapper">
-                    <h3>
-                        Aceita doações em:
-                    </h3>
-                </div>
-                <div class="imgs-wrapper">
-                    {% if publicacao.roupa is True %}
-                        <img id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas">
-                    {% else %}
-                        <img id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas" style="opacity:0.1">
-                    {% endif %}
-
-                    {% if publicacao.alimento is True %}
-                        <img id="comida" src="{% static 'icons/comida.png' %}" alt="comida">
-                    {% else %}
-                        <img id="comida" src="{% static 'icons/comida.png' %}" alt="comida" style="opacity:0.1">
-                    {% endif %}
-                    
-                    {% if publicacao.dinheiro is True %}
-                        <img id="dinheiro" src="{% static 'icons/dinheiro.png' %}" alt="dinheiro">
-                    {% else %}
-                        <img id="dinheiro" src="{% static 'icons/dinheiro.png' %}" alt="dinheiro" style="opacity:0.1">
-                    {% endif %}
-                </div>
-
-                <div class="maisInformacoes-container">
-                    <a href="{% url 'main:publicacao_detalhes' publicacao.id %}" class="button-wrapper">
-                        <button>
-                            Mais informações
-                        </button>
+        <div class="card">
+            <div class="Icon-container">
+                {% if publicacao.usuario.id == usu_id %}
+                    <a href="{% url 'main:editar_publicacao' publicacao.id %}">
+                        <img class="editIcon" src="{% static 'icons/lapis.png' %}" alt=""> 
+                    </a>    
+                {% elif publicacao in publicacoes_salvas %}
+                    <a href="{% url 'main:remover_publicacao_favoritos' publicacao.id %}">
+                        <img class="favIcon" src="{% static 'icons/salvo.png' %}" alt=""> 
+                    </a>    
+                {% else %}
+                    <a href="{% url 'main:salvar_publicacao_favoritos' publicacao.id %}">
+                        <img class="favIcon" src="{% static 'icons/salvar.png' %}" alt=""> 
                     </a>
+                {% endif %}    
+            </div>
+                
+            <div class="card-container">
+                <div class="instituicao-container">
+                    <div class="title-wrapper">
+                        <h3>
+                            Instituição:
+                        </h3>
+                    </div>
+                    <div class="instituicao-wrapper">
+                        <h2>{{ publicacao.usuario.nome }}</h2>
+                    </div>
+
+                    <div class="cardTitle-container">
+                        <h1>{{ publicacao.titulo }}</h1>
+                    </div>
+
+                </div>
+
+                <div class="descricao-container">
+                    <div class="title-wrapper">
+                        <h3>
+                            Descrição:
+                        </h3>
+                    </div>
+                    <div class="descricao-wrapper">
+                        <p>
+                            {{ publicacao.descricao}}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="requisitos-container">
+                    <div class="title-wrapper">
+                        <h3>
+                            Aceita doações em:
+                        </h3>
+                    </div>
+                    <div class="imgs-wrapper">
+                        {% if publicacao.roupa is True %}
+                            <img id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas">
+                        {% else %}
+                            <img id="roupas" src="{% static 'icons/roupas.png' %}" alt="roupas" style="opacity:0.1">
+                        {% endif %}
+
+                        {% if publicacao.alimento is True %}
+                            <img id="comida" src="{% static 'icons/comida.png' %}" alt="comida">
+                        {% else %}
+                            <img id="comida" src="{% static 'icons/comida.png' %}" alt="comida" style="opacity:0.1">
+                        {% endif %}
+                        
+                        {% if publicacao.dinheiro is True %}
+                            <img id="dinheiro" src="{% static 'icons/dinheiro.png' %}" alt="dinheiro">
+                        {% else %}
+                            <img id="dinheiro" src="{% static 'icons/dinheiro.png' %}" alt="dinheiro" style="opacity:0.1">
+                        {% endif %}
+                    </div>
+
+                    <div class="maisInformacoes-container">
+                        <a href="{% url 'main:publicacao_detalhes' publicacao.id %}" class="button-wrapper">
+                            <button>
+                                Mais informações
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     {% endfor %}
 {% endblock painel_principal %}
+
+{% block scripts %}
+
+<script>
+
+    function setGetParameter() {
+        var pub_id = $("#salvar").val();
+
+        $.ajax({
+            type: "POST",
+            url: "{% url 'main:homepage' %}",
+            data: pub_id,
+        });
+    }
+
+</script>
+    
+{% endblock %}

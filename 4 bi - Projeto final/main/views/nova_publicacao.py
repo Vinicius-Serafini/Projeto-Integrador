@@ -8,6 +8,10 @@ def nova_publicacao(request):
     if 'login_id' not in request.session:
         return redirect('/login')
 
+    context = {
+        'usu_id' : request.session['login_id'],
+    }
+
     if request.method == "POST":
 
         publicacao = Publicacao(
@@ -26,4 +30,4 @@ def nova_publicacao(request):
         return redirect('/')
 
 
-    return render(request, 'main/nova_publicacao/index.html') 
+    return render(request, 'main/nova_publicacao/index.html', context) 

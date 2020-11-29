@@ -1,0 +1,103 @@
+
+.form-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+
+    background: #FFF;
+}
+
+.title {
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+form {
+    padding: 20px 40px 20px 20px;
+    text-align: center;
+}
+
+.input-container{
+    text-align: left;
+    font-weight: bold;
+    
+}
+
+.input-wrapper{
+    padding: 10px; 
+}
+
+input{
+    width:100%;
+    height: 40px;
+    background: #E6E6F2; 
+    border-radius: 5px;
+    border: 0px solid;
+    padding: 5px 10px 0 10px;
+}
+
+
+#password-input-container a{
+    text-align: right;
+    font-size: 11px;
+}
+
+.button-wrapper {
+    padding: 30px 0 30px 0;
+}
+
+.button-wrapper > button {
+        
+    background: #19BE9B;
+    width: 60%;
+    border-radius: 30px;
+    padding: 15px;
+    color: azure;
+    font-weight: bold;
+    border: 0px;
+    outline: 0;
+
+}
+
+.button-wrapper > button:hover {
+    background: #24ddb5;
+}
+
+.button-wrapper > button:focus {
+    background: #139277;
+}
+
+#footer-container{
+    padding-bottom: 30px;
+}
+
+
+#cidade-uf-input-container{
+    display: flex;
+}
+
+#cidade-div{
+    width: 50%;
+}
+
+#uf-div{
+    padding-left: 30px;
+    width: 50%;
+}
+
+select {
+    width: 100%;
+    height: 45px;
+    background: #E6E6F2; 
+    border-radius: 5px;
+    border: 0px solid;
+    padding: 5px 0 0 10px;
+}
+
+.excluir-container {
+    text-align: right;
+}
+
+.excluir-container a {
+    font-size: 14px;
+    color: rgb(231, 17, 17);
+}

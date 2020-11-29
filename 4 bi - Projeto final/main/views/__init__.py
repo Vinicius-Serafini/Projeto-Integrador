@@ -4,3 +4,10 @@ from main.views.homepage import *
 from main.views.login import *
 from main.views.nova_publicacao import *
 from main.views.logout import *
+from main.views.editar_publicacao import *
+from main.views.remover_publicacao import *
+from main.views.editar_usuario import *
+from main.views.minhas_publicacoes import *
+from main.views.publicacoes_salvas import *
+from main.views.salvar_publicacao_favoritos import *
+from main.views.remover_publicacao_favoritos import *

@@ -6,7 +6,13 @@
 {% block painel_principal %}
     <div class="card">
         <div class="favIcon-container">
-            <img class="favIcon" src="../Projeto integrador icones/salvar.png" alt="">
+            <a href="{% url 'main:editar_publicacao' publicacao.id %}">
+                {% if publicacao.usuario.id == usu_id %}
+                    <img class="editIcon" src="{% static 'icons/lapis.png' %}" alt=""> 
+                {% else %}
+                    <img class="favIcon" src="{% static 'icons/salvar.png' %}" alt="">
+                {% endif %}    
+            </a>
         </div>
         <div class="card-container">
             <div class="instituicao-container">
